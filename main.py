@@ -8,13 +8,14 @@ screen = pygame.display.set_mode((640,420))
 #bg_music.play(loops =-1)
 
 # background
-sky_service = pygame.image.load("image/sky.jpg")
-ground_surface = pygame.image.load("image/grass.jpg")
+sky_service = pygame.image.load("images/sky.jpg")
+ground_surface = pygame.image.load("images/grass.jpg")
 
 clock = pygame.time.Clock()
 
+player = pygame.sprite.GroupSingle()
+player.add(Player())
 # game loop 
-
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
